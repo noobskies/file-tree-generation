@@ -1,71 +1,69 @@
-# file-tree-generation README
+# File Tree Generation
 
-This is the README for your extension "file-tree-generation". After writing up a brief description, we recommend including the following sections.
+A Visual Studio Code extension that generates a visual tree structure of your folders and files. Perfect for documentation, sharing project structures, or getting a quick overview of your project's organization.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- Generate file tree structure with a right-click on any folder
+- Customize the depth of tree generation
+- Skip common folders like `node_modules` and `.git` automatically
+- Output in a clear, markdown-formatted document
+- View tree structure with proper indentation and branch visualization
 
-For example if there is an image subfolder under your extension project workspace:
+## Usage
 
-\!\[feature X\]\(images/feature-x.png\)
+1. Right-click on any folder in VS Code's explorer
+2. Select "Generate File Tree" from the context menu
+3. Enter your desired depth level (or leave empty for unlimited depth)
+4. A new document will open showing your file tree structure
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+Example output:
+```
+# File Tree for: my-project
+Generated on: November 4, 2024
+Path: my-project
+
+├── src/
+│   ├── components/
+│   │   ├── Button.ts
+│   │   └── Input.ts
+│   └── index.ts
+├── tests/
+│   └── test.ts
+└── package.json
+```
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+No additional requirements. Just install and use!
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+This extension doesn't require any configuration. It works out of the box!
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+- Large directories with many files might take longer to process
+- Some special characters in file names might not display correctly
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+### 0.0.1
 
-### 1.0.0
+Initial release of File Tree Generation:
+- Basic file tree generation
+- Depth control
+- Automatic skipping of node_modules and .git directories
+- Markdown output format
 
-Initial release of ...
+## Contributing
 
-### 1.0.1
+Feel free to open issues or submit pull requests on the repository.
 
-Fixed issue #.
+## License
 
-### 1.1.0
-
-Added features X, Y, and Z.
+MIT
 
 ---
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
 
 **Enjoy!**
