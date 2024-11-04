@@ -1,7 +1,8 @@
 {
   "name": "file-tree-generation",
-  "displayName": "file-tree-generation",
-  "description": "",
+  "displayName": "File Tree Generation",
+  "description": "Generate visual file tree structure from folders",
+  "publisher": "NoobSkie",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.95.0"
@@ -9,15 +10,34 @@
   "categories": [
     "Other"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/noobskies/file-tree-generation"
+  },
   "activationEvents": [],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "file-tree-generation.helloWorld",
-        "title": "Hello World"
+        "command": "file-tree-generation.generateTree",
+        "title": "Generate File Tree"
       }
-    ]
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "when": "explorerResourceIsFolder",
+          "command": "file-tree-generation.generateTree",
+          "group": "navigation"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "file-tree-generation.generateTree",
+          "title": "Generate File Tree from Folder"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run package",
@@ -34,16 +54,16 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.95.0",
     "@types/mocha": "^10.0.9",
     "@types/node": "20.x",
+    "@types/vscode": "^1.95.0",
     "@typescript-eslint/eslint-plugin": "^8.10.0",
     "@typescript-eslint/parser": "^8.7.0",
-    "eslint": "^9.13.0",
-    "esbuild": "^0.24.0",
-    "npm-run-all": "^4.1.5",
-    "typescript": "^5.6.3",
     "@vscode/test-cli": "^0.0.10",
-    "@vscode/test-electron": "^2.4.1"
+    "@vscode/test-electron": "^2.4.1",
+    "esbuild": "^0.24.0",
+    "eslint": "^9.13.0",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.6.3"
   }
 }
