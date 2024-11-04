@@ -55,6 +55,11 @@ This extension works out of the box with sensible defaults:
 
 ## Release Notes
 
+### 0.0.2
+
+- Updated documentation to clarify ignored files feature
+- Better explanation of default behavior
+
 ### 0.0.1
 
 Initial release of File Tree Generation:
