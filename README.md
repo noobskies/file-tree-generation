@@ -6,7 +6,7 @@ A Visual Studio Code extension that generates a visual tree structure of your fo
 
 - Generate file tree structure with a right-click on any folder
 - Customize the depth of tree generation
-- Skip common folders like `node_modules` and `.git` automatically
+- Default ignore patterns for common folders (`node_modules`, `.git`, hidden files)
 - Output in a clear, markdown-formatted document
 - View tree structure with proper indentation and branch visualization
 
@@ -15,7 +15,11 @@ A Visual Studio Code extension that generates a visual tree structure of your fo
 1. Right-click on any folder in VS Code's explorer
 2. Select "Generate File Tree" from the context menu
 3. Enter your desired depth level (or leave empty for unlimited depth)
-4. A new document will open showing your file tree structure
+4. The extension will automatically ignore:
+   - `node_modules` directory
+   - `.git` directory
+   - Hidden files (starting with `.`)
+5. A new document will open showing your file tree structure
 
 Example output:
 ```
@@ -39,7 +43,10 @@ No additional requirements. Just install and use!
 
 ## Extension Settings
 
-This extension doesn't require any configuration. It works out of the box!
+This extension works out of the box with sensible defaults:
+- Automatically ignores `node_modules` and `.git` directories
+- Skips hidden files and directories (starting with `.`)
+- Unlimited depth by default (can be customized per use)
 
 ## Known Issues
 
@@ -53,7 +60,10 @@ This extension doesn't require any configuration. It works out of the box!
 Initial release of File Tree Generation:
 - Basic file tree generation
 - Depth control
-- Automatic skipping of node_modules and .git directories
+- Automatic file/folder ignoring
+  - node_modules
+  - .git
+  - Hidden files
 - Markdown output format
 
 ## Contributing
